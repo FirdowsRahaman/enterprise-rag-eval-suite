@@ -1,0 +1,32 @@
+name: RAG Evaluation Quality Gate CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          pip install ruff bandit pydantic tabulate
+
+      - name: Run Quality Scan
+        run: |
+          ruff check src demo
+          bandit -r src -ll -ii
+
+      - name: Execute Evaluation Harness Demo
+        run: |
+          python demo/run_evaluation.py
