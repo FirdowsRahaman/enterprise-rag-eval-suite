@@ -1,5 +1,4 @@
-"""
-Enterprise RAG Evaluation Runner Demo
+"""Enterprise RAG Evaluation Runner Demo
 Evaluates sample enterprise queries across English, German, and French
 and produces a compliance benchmark table for EU AI Act Article 15 validation.
 """
@@ -8,8 +7,8 @@ from src.evaluators.rag_triad import RAGTriadEvaluator, RAGEvaluationSample
 
 def run_rag_eval_demo():
     print("="*75)
-    print("📊 Enterprise RAG Evaluation Suite (EU AI Act Quality Gate)")
-    print("   Metrics: Context Relevance • Groundedness / Faithfulness • Answer Relevance")
+    print("Enterprise RAG Evaluation Suite (EU AI Act Quality Gate)")
+    print("Metrics: Context Relevance • Groundedness / Faithfulness • Answer Relevance")
     print("="*75)
 
     samples = [
@@ -41,15 +40,15 @@ def run_rag_eval_demo():
         result = RAGTriadEvaluator.evaluate_sample(s)
         status = "PASSED" if result["quality_gate_passed"] else "FAILED (HALLUCINATION DETECTED)"
         print(f"Sample {i}: '{s.query[:55]}...'")
-        print(f"   Context Relevance : {result['context_relevance']}")
-        print(f"   Groundedness      : {result['groundedness_faithfulness']}")
-        print(f"   Answer Relevance  : {result['answer_relevance']}")
-        print(f"   Composite Score   : {result['composite_rag_score']}")
-        print(f"   Hallucination Risk: {result['hallucination_risk']}")
-        print(f"   Gate Result       : {status}\n")
+        print(f"Context Relevance : {result['context_relevance']}")
+        print(f"Groundedness      : {result['groundedness_faithfulness']}")
+        print(f"Answer Relevance  : {result['answer_relevance']}")
+        print(f"Composite Score   : {result['composite_rag_score']}")
+        print(f"Hallucination Risk: {result['hallucination_risk']}")
+        print(f"Gate Result       : {status}\n")
 
     print("="*75)
-    print("✅ Evaluation harness execution complete.")
+    print("Evaluation harness execution complete.")
 
 if __name__ == "__main__":
     run_rag_eval_demo()

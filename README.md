@@ -1,4 +1,4 @@
-# Enterprise RAG Evaluation Suite (EU AI Act Quality Gate) 📊
+# Enterprise RAG Evaluation Suite (EU AI Act Quality Gate) 
 
 <p align="left">
   <img src="https://img.shields.io/badge/Evaluation-RAG%20Triad%20%7C%20Faithfulness-10B981?style=flat-square" alt="RAG Triad">
@@ -11,17 +11,17 @@ A production-grade evaluation harness and CI/CD quality gate for Enterprise Retr
 
 ---
 
-## 📑 Table of Contents
-- [The Production RAG Challenge](#-the-production-rag-challenge)
-- [The RAG Triad Metrics](#-the-rag-triad-metrics)
-- [Architecture](#-architecture)
-- [Quick Start](#-quick-start)
-- [CI/CD Quality Gate Integration](#-cicd-quality-gate-integration)
-- [License](#-license)
+## Table of Contents
+- [The Production RAG Challenge](#the-production-rag-challenge)
+- [The RAG Triad Metrics](#the-rag-triad-metrics)
+- [Architecture](#architecture)
+- [Quick Start](#quick-start)
+- [CI/CD Quality Gate Integration](#cicd-quality-gate-integration)
+- [License](#license)
 
 ---
 
-## 🎯 The Production RAG Challenge
+## The Production RAG Challenge
 
 In enterprise environments, an un-evaluated RAG pipeline is a liability. Generating inaccurate legal, financial, or medical guidance exposes organizations to severe regulatory liability and loss of customer trust.
 
@@ -32,7 +32,7 @@ This suite provides deterministic, automated evaluation metrics to detect:
 
 ---
 
-## 📐 The RAG Triad Metrics
+## The RAG Triad Metrics
 
 ```
                      [ User Question ]
@@ -52,7 +52,7 @@ This suite provides deterministic, automated evaluation metrics to detect:
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Clone & Setup**:
    ```bash
@@ -68,5 +68,5 @@ This suite provides deterministic, automated evaluation metrics to detect:
 
 ---
 
-## 📄 License
+## License
 This project is licensed under the MIT License.

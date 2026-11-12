@@ -1,5 +1,4 @@
-"""
-RAG Triad Evaluator & Hallucination Guard
+"""RAG Triad Evaluator & Hallucination Guard
 Implements Context Relevance, Groundedness (Faithfulness), and Answer Relevance
 conforming to EU AI Act Article 13 & 15 transparency and accuracy benchmarks.
 """
@@ -14,8 +13,7 @@ class RAGEvaluationSample(BaseModel):
     ground_truth: str = ""
 
 class RAGTriadEvaluator:
-    """
-    Evaluates enterprise RAG quality along three orthogonal axes:
+    """Evaluates enterprise RAG quality along three orthogonal axes:
     1. Context Relevance (precision of retrieved documents)
     2. Groundedness / Faithfulness (absence of hallucinated assertions)
     3. Answer Relevance (direct alignment with user intent)
