@@ -3,7 +3,8 @@ Evaluates sample enterprise queries across English, German, and French
 and produces a compliance benchmark table for EU AI Act Article 15 validation.
 """
 
-from src.evaluators.rag_triad import RAGTriadEvaluator, RAGEvaluationSample
+from src.evaluators.rag_triad import RAGEvaluationSample, RAGTriadEvaluator
+
 
 def run_rag_eval_demo():
     print("="*75)

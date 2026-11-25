@@ -3,12 +3,14 @@ Implements Context Relevance, Groundedness (Faithfulness), and Answer Relevance
 conforming to EU AI Act Article 13 & 15 transparency and accuracy benchmarks.
 """
 
-from typing import List, Dict, Any
-from pydantic import BaseModel, Field
+from typing import Any
+
+from pydantic import BaseModel
+
 
 class RAGEvaluationSample(BaseModel):
     query: str
-    retrieved_contexts: List[str]
+    retrieved_contexts: list[str]
     generated_answer: str
     ground_truth: str = ""
 
@@ -20,7 +22,7 @@ class RAGTriadEvaluator:
     """
 
     @staticmethod
-    def evaluate_sample(sample: RAGEvaluationSample) -> Dict[str, Any]:
+    def evaluate_sample(sample: RAGEvaluationSample) -> dict[str, Any]:
         query_words = set(sample.query.lower().split())
         answer_words = set(sample.generated_answer.lower().split())
         combined_context = " ".join(sample.retrieved_contexts).lower()
